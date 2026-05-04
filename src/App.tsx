@@ -118,6 +118,55 @@ function App() {
                 </a>
               </div>
             </motion.div>
+
+            {/* Blog Post Project */}
+            <motion.div
+              variants={scaleUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+              className="relative rounded-3xl border border-white/15 bg-white/5 backdrop-blur-xl p-8 sm:p-10 hover:border-white/30 transition duration-300 hover:shadow-2xl hover:shadow-violet-500/10 mt-6"
+            >
+              <h3 className="text-2xl sm:text-3xl font-bold mb-3">Blog Post Application 📝</h3>
+
+              <p className="text-gray-300 mb-5 leading-7">
+                A dynamic blog platform built with React and Node.js. Features include creating, reading, updating, and deleting blog posts, user authentication, responsive design, and a modern, intuitive interface for content management.
+              </p>
+
+              {/* Tech Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["React", "Node.js", "MongoDB", "CSS"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-violet-500/20 border border-violet-400/30 text-violet-300 text-sm rounded-full hover:bg-violet-500/30 transition"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://blogpost-oq3p.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-semibold rounded-xl transition duration-300 hover:shadow-lg hover:scale-105 transform"
+                >
+                  🚀 Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/gopal-shrma/BLOGPOST.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white font-semibold rounded-xl transition duration-300 hover:scale-105 transform backdrop-blur-sm"
+                >
+                  💻 GitHub Repo
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         </section>
 
