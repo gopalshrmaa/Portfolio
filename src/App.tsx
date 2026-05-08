@@ -40,7 +40,7 @@ function App() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             {/* Download Resume Button */}
-            <a href="/GopalResume.pdf" download
+            <a href="/GOPALResume.pdf" download
               className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-semibold rounded-2xl transition duration-300 hover:shadow-lg hover:shadow-violet-500/30 hover:scale-105 transform"
             >
               📄 Download Resume
