@@ -16,6 +16,27 @@ const scaleUp = {
 const skillList = ["React", "JavaScript", "TypeScript", "Java", "Python"];
 
 function App() {
+  // Force-download handler for browsers that ignore the `download` attribute
+  const downloadResume = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const res = await fetch('/GOPALResume.pdf');
+      if (!res.ok) throw new Error('Network response was not ok');
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      a.download = 'GOPALResume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      URL.revokeObjectURL(url);
+      a.remove();
+    } catch (err) {
+      // fallback: open in new tab so user can manually save
+      window.open('/GOPALResume.pdf', '_blank');
+    }
+  };
   return (
     <div className="min-h-screen bg-[#020314] text-white">
       <Navbar />
@@ -45,7 +66,7 @@ function App() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             {/* Download Resume Button */}
-            <a href="/GOPALResume.pdf" download="GOPALResume.pdf"
+            <a href="/GOPALResume.pdf" download="GOPALResume.pdf" onClick={downloadResume}
               className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-semibold rounded-2xl transition duration-300 hover:shadow-lg hover:shadow-violet-500/30 hover:scale-105 transform"
             >
               📄 Download Resume
