@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#070617]/60 via-transparent backdrop-blur-sm border-b border-white/5">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <a href="#" className="text-xl font-semibold text-pink-400">Pari <span className="text-white">Jain</span></a>
+          <a href="#" className="text-xl font-semibold text-pink-400">Gopal <span className="text-white">Sharma</span></a>
         </div>
 
         <div className="hidden md:flex items-center gap-6 text-sm text-gray-300">
@@ -16,7 +16,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="px-4 py-2 rounded-full bg-pink-500 text-white text-sm font-medium hover:opacity-95 transition">Hire me</a>
+          <a href="#contact" className="px-4 py-2 rounded-full bg-pink-500 text-white text-sm font-medium hover:opacity-95 transition hire-btn">Hire me</a>
         </div>
       </div>
     </nav>

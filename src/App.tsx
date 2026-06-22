@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import TechSection from "./components/TechSection";
+import CustomCursor from "./components/CustomCursor";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -19,6 +20,7 @@ function App() {
     <div className="min-h-screen bg-[#020314] text-white">
       <Navbar />
       <div className="mx-auto max-w-6xl px-6 pt-24 pb-12 sm:px-8">
+        <CustomCursor />
         {/* HERO SECTION */}
         <motion.header
           initial="hidden"
@@ -43,7 +45,7 @@ function App() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             {/* Download Resume Button */}
-            <a href="/GOPALResume.pdf" download
+            <a href="/GOPALResume.pdf" download="GOPALResume.pdf"
               className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-semibold rounded-2xl transition duration-300 hover:shadow-lg hover:shadow-violet-500/30 hover:scale-105 transform"
             >
               📄 Download Resume
@@ -51,7 +53,7 @@ function App() {
 
             {/* GitHub Button */}
             <a
-              href="https://github.com/gopal-shrma"
+              href="https://github.com/gopalshrmaa"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white font-semibold rounded-2xl transition duration-300 hover:shadow-lg hover:scale-105 transform backdrop-blur-sm"

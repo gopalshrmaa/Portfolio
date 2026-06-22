@@ -20,7 +20,7 @@ export default function StackCard({ title, items, icon }: Props) {
       viewport={{ once: true, amount: 0.2 }}
       variants={cardVariant}
       transition={{ duration: 0.6 }}
-      className="rounded-2xl border border-white/8 bg-white/3 backdrop-blur-md p-6 shadow-sm"
+      className="stack-card rounded-2xl border border-white/8 bg-white/3 backdrop-blur-md p-6 shadow-sm"
     >
       <div className="flex items-center gap-3 mb-4">
         <div className="w-10 h-10 rounded-lg bg-[#1f2330] flex items-center justify-center text-xl">{icon}</div>

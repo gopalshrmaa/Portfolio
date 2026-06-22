@@ -35,3 +35,53 @@ body {
 .section-sub {
   color: #ff79c6;
 }
+
+/* Custom cursor styles */
+.custom-cursor-dot,
+html, body {
+  cursor: none;
+}
+
+.custom-cursor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg,#ff7aa2,#7c3aed);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 9999;
+  transition: transform 120ms ease, background 150ms ease;
+  mix-blend-mode: screen;
+}
+
+.custom-cursor-outline {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 9998;
+  transition: width 160ms ease, height 160ms ease, border-color 160ms ease, transform 120ms ease;
+}
+
+/* small arrow styles removed; using dot instead */
+
+.custom-cursor-outline.cursor-hover {
+  width: 58px;
+  height: 58px;
+  border-color: rgba(255,122,193,0.25);
+}
+
+.custom-cursor-arrow.cursor-hover svg path {
+  stroke: #ffd1e8;
+}
+
+.custom-cursor-dot.cursor-hover {
+  transform: translate3d(-50%, -50%, 0) scale(1.9);
+  background: linear-gradient(90deg,#ffd1e8,#b794f4);
+}

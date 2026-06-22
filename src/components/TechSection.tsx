@@ -3,12 +3,12 @@ import StackCard from "./StackCard";
 
 export default function TechSection() {
   const cards = [
-    { title: "Languages", items: ["Python","C++","JavaScript","SQL"] },
-    { title: "AI / ML", items: ["PyTorch","TensorFlow","scikit-learn","Pandas"] },
-    { title: "Web Dev", items: ["React.js","Next.js","Node.js","Tailwind"] },
-    { title: "Concepts", items: ["Deep Learning","Prompt Engineering","DSA"] },
-    { title: "Tools", items: ["Git","VS Code","Vercel","Google Colab"] },
-    { title: "Domains", items: ["Computer Vision","NLP","Anomaly Detection"] },
+    { title: "Languages", items: ["Python","C++","JavaScript","SQL"], icon: <span>🐍</span> },
+    { title: "AI / ML", items: ["PyTorch","TensorFlow","scikit-learn","Pandas"], icon: <span>🧠</span> },
+    { title: "Web Dev", items: ["React.js","Next.js","Node.js","Tailwind"], icon: <span>🌐</span> },
+    { title: "Concepts", items: ["Deep Learning","Prompt Engineering","DSA"], icon: <span>⚡</span> },
+    { title: "Tools", items: ["Git","VS Code","Vercel","Google Colab"], icon: <span>🛠️</span> },
+    { title: "Domains", items: ["Computer Vision","NLP","Anomaly Detection"], icon: <span>🔬</span> },
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function TechSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cards.map((c) => (
-          <StackCard key={c.title} title={c.title} items={c.items} />
+          <StackCard key={c.title} title={c.title} items={c.items} icon={c.icon} />
         ))}
       </div>
     </section>
