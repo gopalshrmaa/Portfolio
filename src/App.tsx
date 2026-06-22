@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import TechSection from "./components/TechSection";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +17,8 @@ const skillList = ["React", "JavaScript", "TypeScript", "Java", "Python"];
 function App() {
   return (
     <div className="min-h-screen bg-[#020314] text-white">
-      <div className="mx-auto max-w-6xl px-6 py-12 sm:px-8">
+      <Navbar />
+      <div className="mx-auto max-w-6xl px-6 pt-24 pb-12 sm:px-8">
         {/* HERO SECTION */}
         <motion.header
           initial="hidden"
@@ -57,6 +60,8 @@ function App() {
             </a>
           </div>
         </motion.header>
+
+        <TechSection />
 
         {/* PROJECTS SECTION */}
         <section id="projects" className="mb-20">
@@ -233,7 +238,7 @@ function App() {
 
               {/* GitHub */}
               <a
-                href="https://github.com/gopal-shrma"
+                href="https://github.com/gopalshrmaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-gray-700/30 hover:bg-gray-700/50 border border-gray-600/30 hover:border-gray-500/60 text-gray-300 font-semibold transition duration-300 hover:shadow-lg hover:scale-105 transform backdrop-blur-sm"
